@@ -1,0 +1,168 @@
+header#header{
+	height: 90px;
+	// position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 13px 0;
+	z-index: 999;
+	border: 0;
+	background-color: $brown;
+
+	// .grid-container{
+	// 	max-width: 1230px !important;
+	// }
+
+& > .grid-container{
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+	div#branding{
+		display: inline-block;
+		float: left;
+		width: 130px;
+		margin: 0;
+
+		#logo {
+			max-width: 100%;
+		}
+
+		p{
+			margin: 0;
+		}
+	}
+
+	div#nav{
+		width: calc(100% - 130px);
+		display: inline-block;
+		text-align: right;
+
+		@include breakpoint(small only){
+			display: none;
+			opacity: 0;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			left: 0;
+			top: 0;
+
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		nav{
+			display: inline-block;
+
+			@include breakpoint(small only){
+				
+			}
+
+			 & > ul{
+				margin-left: 1.25rem;
+				margin-bottom: 0;
+
+				@include breakpoint(small only){
+					margin: 0;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+
+				& > li{
+					list-style: none;
+					display: block;
+					float: left;
+					position: relative;
+
+					& > a{
+						font-weight: 500;
+						opacity: 1;
+						padding: 0 10px;
+						transition: color 400ms ease, opacity 400ms ease;
+						background: transparent;
+						text-align: left;
+						color: $white;
+						border-right: 1px solid $white;
+
+						@include breakpoint(small only){
+							padding: 15px 0;
+						}
+
+						&:hover{
+							color: $orange;
+						}
+					}
+
+					& > ul.sub-menu{
+						display: none;
+						position: absolute;
+						background-color: $brown;
+						margin-left: 0;
+						z-index: 9;
+						width: 200px;
+						padding: 20px 0 10px;
+
+						li{
+							list-style: none;
+							a{
+								text-align: left;
+								color: $white;
+								padding: 10px 20px;
+
+								&:hover{
+									color: $orange;
+								}
+							}
+						}
+						
+						
+					}
+
+					&.current-menu-item{
+						a{
+							color: $orange;
+						}
+					}
+
+					&:last-child{
+						a{
+							border: 0;
+						}
+					}
+
+					&:hover{
+						ul{
+							display: block;
+							
+						}
+					}
+				}
+			}
+
+			&#menu-primary{
+
+			}
+
+
+		}
+	}
+
+	div#action-menu{
+		display: none;
+
+		@include breakpoint(small only){
+			display: block;
+			position: relative;
+			float: right;
+
+			.fechar-menu{
+				display: none;
+			}
+		}
+	}
+}

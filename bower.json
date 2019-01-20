@@ -1,0 +1,28 @@
+{
+  "name": "empreende",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Moser Damasceno <moser.damasceno@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "foundation-sites": "^6.4.3",
+    "waypoints": "jquery-waypoints#^4.0.1",
+    "motion-ui": "^1.2.3",
+    "sweetalert2": "^6.6.10",
+    "jquery.maskedinput": "^1.4.1"
+  },
+  "devDependencies": {
+    "motion-ui": "^1.2.3"
+  }
+}

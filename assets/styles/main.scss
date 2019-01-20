@@ -1,0 +1,24 @@
+@import "common/fonts";
+@import "common/variables";
+@import "settings/_settings";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../libraries/foundation-sites/scss/foundation.scss";
+@import "../libraries/sweetalert2/src/sweetalert2.scss";
+// endbower
+
+@include foundation-everything;
+
+@import "common/mixin";
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/custom";
+
+

@@ -1,0 +1,451 @@
+#banner-home{
+
+	.orbit{
+
+		.orbit-slide{
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding: 0 0 80px 0;
+			height: 330px;
+
+			.grid-container{
+				height: 100%;
+				display: flex;
+				align-items: flex-end;
+
+				.grid-x{
+					width: 100%;
+				}
+			}
+			
+			h1{
+				color: $white;
+				margin-bottom: 30px;
+			}
+
+			a{
+				@extend %btn-orange;
+			}
+		}
+
+		.container-controls{
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+
+			.grid-container{
+				text-align: right;
+				
+
+				.orbit-controls{
+					transform: translateX(100%);
+					padding-left: 40px;
+					display: inline-block;
+
+					div{
+						display: flex;
+						height: 50px;
+
+
+						.orbit-next{
+							padding: 0;
+							position: relative;
+						}
+						.orbit-previous{
+							padding: 0;
+							position: relative;
+						}
+
+						.orbit-bullets{
+							display: flex;
+							align-items: center;
+							margin: 0 3px;
+
+							button{
+								width: 10px;
+								height: 10px;
+								background-color: transparent;
+								border-radius: 50%;
+								border: 1px solid $white;
+								margin: 0 2px;
+
+								&.is-active{
+									background-color: $white;
+								}
+							}
+						}
+					}
+
+
+					
+				}
+				
+			}
+
+		}
+	}
+
+
+	.sustainability{
+		transform: translateY(-50px);
+		position: relative;
+		
+
+		.cell{
+			h2{
+				margin-bottom: 10px;
+				color: #3a3932;
+			}
+
+			p{
+				color: $white;
+				margin-bottom: 10px;
+			}
+
+			a{
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $white;
+				font-weight: 600;
+				font-size: 13px;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+
+			&:last-child{
+				background-color: #aaa99c;
+				padding: 20px 70px 20px 25px;		
+			}
+		}
+
+		&.cut-border{
+			@include cut-right();
+		}
+
+
+	}
+
+
+}
+
+#projects{
+	background-image: url(../images/bg-karoon.jpg);
+	padding: 25px 0;
+	margin-bottom: 15px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+	@include section-home();
+}
+
+#about{
+	@include section-home();
+}
+#investors{
+	@include section-home(#aaa99c);
+}
+
+
+#news{
+	background-color: #eaeae6;
+	padding: 15px 0;
+	h2{
+		color: $orange;
+		margin-bottom: 0;
+
+	}
+
+	.slides{
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+		
+
+		.bx-wrapper{
+			border: 0;
+			background-color: transparent;
+			box-shadow: none;
+			margin-bottom: 0;
+
+			.news-slider{
+				.cell{
+					.inner-post{
+						padding: 17px;
+
+						.image{
+							position: relative;
+							margin-bottom: 5px;
+							.cut-border{
+								@include cut-right(#eaeae6);
+
+								img{
+									margin: 0;
+								}
+								
+							}
+						}
+
+						h3{
+							color: $orange;
+							font-size: 17px;
+							margin-bottom: 5px;
+							font-weight: 400;
+
+						}
+
+						p{
+							color: #636250;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+
+		}
+
+		.prevSelect{
+			position: absolute;
+			left: -50px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			.image{
+				display: none;
+				
+			}
+		}
+
+		.nextSelect{
+			position: absolute;
+			right: -50px;
+			top: 50%;
+			transform: translateY(-50%);
+
+			.image{
+				display: none;
+				
+			}
+		}
+	}
+}
+
+
+#newsletter{
+	text-align: center;
+	padding: 100px 0;
+	background-size: cover;
+	
+	h2{
+		color: $white;
+		margin-bottom: 5px;
+		text-transform: uppercase;
+		font-size: 17px;
+		font-weight: 400;
+	}
+
+	p{
+		color: $white;
+		margin-bottom: 10px;
+
+	}
+
+	a{
+		@extend %btn-orange;
+	}
+}
+
+
+#contact{
+	text-align: center;
+	padding: 115px 0;
+	background-size: cover;
+	
+	h2{
+		color: $orange;
+		margin-bottom: 5px;
+		font-size: 38px;
+	}
+
+	p{
+		color: $white;
+		margin-bottom: 10px;
+
+	}
+
+	a{
+		color: #636250;
+		padding: 0 7px;
+		font-weight: 400;
+		font-size: 22px;
+		transition: 400ms ease color;
+		position: relative;
+
+		&::after{
+			content: '';
+			height: 18px;
+			width: 2px;
+			border: 0;
+			background: #636250;
+			position: absolute;
+			right: -1px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:last-child{
+
+			&::after{
+				display: none;
+
+			}
+
+			border: 0;
+		}
+
+		&:hover{
+			color: $orange;
+		}
+	}
+}
+
+
+
+
+#banner-page{
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 30px 0 0;
+
+	h1{
+		color: $white;
+		margin-bottom: 20px;
+		font-size: 50px;
+	}
+
+	.orbit-slide{
+		position: relative;
+		
+		.orbit-figure{
+			@include cut-right();
+		}
+	}
+}
+
+#content-page{
+	background-image: url(../images/bg-karoon.jpg);
+	padding: 35px 0;
+	margin: 40px 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	.menu-sidebar{
+		padding-right: 70px;
+
+		ul{
+			margin: 0;
+
+			li{
+				list-style: none;
+				margin-bottom: 12px;
+
+				a{
+					color: #636250;
+					font-weight: 300;
+					font-size: 24px;
+					line-height: 1;
+					margin-bottom: 5px;
+					display: block;
+				}
+
+				.children{
+					padding-left: 20px;
+
+					li{
+						a{
+							font-size: 1.3em;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.page-content{
+		color: #636250;
+		
+		h2{
+			color: $orange;
+		}
+
+		h3{
+			color: $orange;
+			font-weight: 600;
+			font-size: 15px;
+			position: relative;
+			margin-bottom: 10px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: -20px;
+				top: 50%;
+				transform: translateY(-50%);
+				display: inline-block;
+				vertical-align: middle;
+				width: 0;
+				height: 0;
+				border-top: 12px solid transparent;
+				border-bottom: 12px solid transparent;
+				border-left: 12px solid #89a0d1;
+			}
+
+		}
+
+		p{
+			margin-bottom: 20px;
+
+		}
+
+		.content{
+			margin-bottom: 40px;
+		}
+
+		.inner-content{
+			a[data-fancybox]{
+				display: none;
+				position: relative;
+				
+				&::before{
+					opacity: 0;
+					content: '';
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background-image: url(../images/icon-search.png);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-color: rgba(0,0,0,0.5);
+					transition: 400ms opacity;
+					
+				}
+
+				&:hover{
+					&::before{
+						opacity: 1;
+					}
+				}
+				
+				&.active{
+					display: inline-block;
+					
+				}
+			}
+		}
+	}
+	
+	
+}

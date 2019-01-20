@@ -1,0 +1,19 @@
+%btn{
+	background-color: $orange;
+	color: $white;
+	text-transform: uppercase;
+	border: 1px solid;
+	padding: 5px 20px;
+	font-weight: 600;
+	font-size: 12px;
+	transition-property: background, color;
+
+	&:hover{
+		background-color: $white;
+		color: $orange;
+	}
+}
+
+%btn-orange{
+	@extend %btn;
+}
